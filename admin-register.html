@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Registration | AP Citizen Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body style="background: #f0f2f5;">
+
+    <div style="display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px;">
+        <div class="card" style="max-width: 450px; width: 100%; padding: 40px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h2 style="color: var(--primary-color);">Official Registration</h2>
+                <p style="color: #666; font-size: 0.9rem;">Register as a Government Representative</p>
+            </div>
+
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="regName">Full Name</label>
+                    <input type="text" id="regName" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="regDept">Department</label>
+                    <select id="regDept" required>
+                        <option value="">Select Department</option>
+                        <option value="Municipal">Municipal Administration</option>
+                        <option value="Water">Water Works</option>
+                        <option value="Electricity">APSPDCL / APEPDCL</option>
+                        <option value="Waste">Waste Management</option>
+                        <option value="Roads">R&B Department</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Official Email</label>
+                    <input type="email" id="regEmail" required placeholder="name@ap.gov.in">
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Password</label>
+                    <input type="password" id="regPassword" required placeholder="At least 6 characters">
+                </div>
+                <div class="form-group">
+                    <label for="regConfirmPassword">Confirm Password</label>
+                    <input type="password" id="regConfirmPassword" required placeholder="Repeat password">
+                </div>
+
+                <button type="submit" id="regBtn" style="margin-top: 10px;">Create Account</button>
+            </form>
+
+            <div id="regError"
+                style="display: none; margin-top: 15px; color: var(--error); text-align: center; font-size: 0.9rem;">
+                Registration failed. Please try again or check your email format.
+            </div>
+
+            <div style="margin-top: 25px; text-align: center;">
+                <p style="font-size: 0.9rem; color: #666;">Already have an account? <a href="admin-login.html"
+                        style="color: var(--primary-color); font-weight: 600;">Login here</a></p>
+                <a href="index.html"
+                    style="text-decoration: none; font-size: 0.8rem; color: #888; display: block; margin-top: 15px;"><i
+                        class="fa-solid fa-arrow-left"></i> Back to Public Portal</a>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/auth.js"></script>
+</body>
+
+</html>

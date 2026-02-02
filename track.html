@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Complaint | AP Citizen Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo-section">
+                <div class="logo-text">
+                    <h1>Andhra Pradesh State Portal</h1>
+                    <p>Citizen Complaint Management System</p>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="submit.html">Submit Complaint</a></li>
+                <li><a href="track.html">Track Complaint</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="admin-login.html" class="btn-cta">Admin Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="section-padding">
+        <div class="form-container" style="max-width: 600px;">
+            <h2 style="text-align: center; margin-bottom: 30px; color: var(--primary-color);">Track Your Complaint</h2>
+
+            <div class="form-group">
+                <label for="trackID">Complaint ID or Registered Email</label>
+                <div style="display: flex; gap: 10px;">
+                    <input type="text" id="trackID" placeholder="Enter ID or Email" style="flex: 1;">
+                    <button id="trackBtn" style="width: auto; padding: 0 25px;">Track</button>
+                </div>
+            </div>
+
+            <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
+            <div id="trackResult" style="display: none;">
+                <div class="card" style="border-left: 5px solid var(--accent-color);">
+                    <div style="display: flex; justify-content: space-between; align-items: start;">
+                        <div>
+                            <h4 id="resID">ID: #AP-12345</h4>
+                            <p id="resCategory" style="font-weight: 600; color: var(--accent-color);">Pothole Issue</p>
+                        </div>
+                        <span id="resStatus" class="badge badge-pending">Pending</span>
+                    </div>
+                    <p id="resDesc" style="margin-top: 15px; color: #555;">Detailed description of the complaint will
+                        appear here...</p>
+                    <div style="margin-top: 20px; font-size: 0.85rem; color: #888;">
+                        <p>District: <span id="resDistrict">Guntur</span></p>
+                        <p>Town: <span id="resTown">Tenali</span></p>
+                        <p>Reported on: <span id="resDate">Jan 20, 2024</span></p>
+                    </div>
+
+                    <div id="timeline" style="margin-top: 25px; border-top: 1px solid #eee; padding-top: 15px;">
+                        <h5 style="margin-bottom: 10px;">Status History</h5>
+                        <ul style="list-style: none; padding-left: 10px; border-left: 2px solid #eee;">
+                            <li style="margin-bottom: 10px; position: relative;" id="step-pending">
+                                <i class="fa-solid fa-circle"
+                                    style="font-size: 0.6rem; color: #f39c12; position: absolute; left: -15px; top: 6px;"></i>
+                                <small>Complaint Received (Pending)</small>
+                            </li>
+                            <li style="margin-bottom: 10px; position: relative; opacity: 0.3;" id="step-progress">
+                                <i class="fa-solid fa-circle"
+                                    style="font-size: 0.6rem; color: #3498db; position: absolute; left: -15px; top: 6px;"></i>
+                                <small>Official Assigned (In Progress)</small>
+                            </li>
+                            <li style="margin-bottom: 10px; position: relative; opacity: 0.3;" id="step-resolved">
+                                <i class="fa-solid fa-circle"
+                                    style="font-size: 0.6rem; color: #27ae60; position: absolute; left: -15px; top: 6px;"></i>
+                                <small>Resolved Successfully</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="trackError" style="display: none; text-align: center; color: var(--error); padding: 20px;">
+                <p>No complaint found with the provided details. Please check and try again.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer style="margin-top: 50px;">
+        <div class="footer-bottom">
+            &copy; 2024 Government of Andhra Pradesh. Official Citizen Portal.
+        </div>
+    </footer>
+
+    <script type="module" src="js/complaints.js"></script>
+</body>
+
+</html>

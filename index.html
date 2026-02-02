@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andhra Pradesh Citizen Complaint Portal | Official</title>
+    <meta name="description"
+        content="Official portal for citizens of Andhra Pradesh to report and track civic issues like potholes, garbage, and more.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo-section">
+                <!-- Placeholder for AP Logo -->
+                <div class="logo-text">
+                    <h1>Andhra Pradesh State Portal</h1>
+                    <p>Citizen Complaint Management System</p>
+                </div>
+            </div>
+
+            <!-- Floating Quick Access QR for Mobile Redirect -->
+            <div id="quick-redirect-qr" style="cursor: pointer; position: relative;" title="Scan to visit on mobile">
+                <div id="header-qr"
+                    style="background: #fff; padding: 5px; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+                </div>
+                <small
+                    style="font-size: 0.6rem; display: block; text-align: center; color: var(--secondary-color);">SCAN
+                    PORTAL</small>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="submit.html">Submit Complaint</a></li>
+                <li><a href="track.html">Track Complaint</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="admin-login.html" class="btn-cta">Admin Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Empowering Citizens, Improving Governance</h2>
+            <p>Report civic issues in your area and help us build a better Andhra Pradesh. Transparent, efficient, and
+                responsive governance at your fingertips.</p>
+            <div style="margin-top: 30px;">
+                <a href="submit.html" class="card"
+                    style="padding: 15px 40px; text-decoration: none; color: var(--primary-color); font-weight: 700; background: var(--secondary-color);">Register
+                    a Complaint</a>
+            </div>
+        </section>
+
+        <section class="section-padding" style="background: #fff;">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <h3 style="font-size: 2rem; margin-bottom: 15px;">Report Issues Instantly</h3>
+                <p>Scan the QR code below from your mobile to open the complaint form directly.</p>
+                <div id="public-qr"
+                    style="display: flex; justify-content: center; background: #fff; padding: 20px; border-radius: 15px; border: 2px dashed #ddd; width: fit-content; margin: 20px auto;">
+                </div>
+                <p style="font-size: 0.9rem; color: #888;">#DigitalAndhra #CitizenService</p>
+            </div>
+
+            <h3 style="text-align: center; margin-bottom: 40px; font-size: 2rem;">How It Works</h3>
+            <div class="grid">
+                <div class="card" style="text-align: center;">
+                    <i class="fa-solid fa-file-pen"
+                        style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 20px;"></i>
+                    <h4>Submit Complaint</h4>
+                    <p>Fill out the complaint form with details, location, and optional images.</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <i class="fa-solid fa-magnifying-glass-location"
+                        style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 20px;"></i>
+                    <h4>Real-time Tracking</h4>
+                    <p>Use your unique ID to track the resolution progress of your report.</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <i class="fa-solid fa-check-double"
+                        style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 20px;"></i>
+                    <h4>Verified Resolution</h4>
+                    <p>Receive updates as officials address and resolve your reported concerns.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" style="background: #fff;">
+            <h3 style="text-align: center; margin-bottom: 40px;">Recent Public Reports</h3>
+            <div id="recent-complaints" class="grid">
+                <!-- JS will inject public complaints here -->
+                <div class="card">
+                    <span class="badge badge-pending">Pending</span>
+                    <h5 style="margin: 10px 0;">Pothole on MG Road</h5>
+                    <p style="font-size: 0.9rem; color: #666;">District: NTR District | Vijayawada</p>
+                    <p style="margin-top: 10px;">Deep pothole causing traffic hazards near the main circle.</p>
+                    <small style="color: #999; display: block; margin-top: 15px;">Reported 2 hours ago</small>
+                </div>
+                <div class="card">
+                    <span class="badge badge-progress">In Progress</span>
+                    <h5 style="margin: 10px 0;">Broken Street Light</h5>
+                    <p style="font-size: 0.9rem; color: #666;">District: Guntur | Tenali</p>
+                    <p style="margin-top: 10px;">Street light not working for 3 days on 4th Street.</p>
+                    <small style="color: #999; display: block; margin-top: 15px;">Reported 5 hours ago</small>
+                </div>
+                <div class="card">
+                    <span class="badge badge-resolved">Resolved</span>
+                    <h5 style="margin: 10px 0;">Garbage Heap Clearing</h5>
+                    <p style="font-size: 0.9rem; color: #666;">District: Visakhapatnam | MVP Colony</p>
+                    <p style="margin-top: 10px;">Overflowing garbage bins successfully cleared by GVMC.</p>
+                    <small style="color: #999; display: block; margin-top: 15px;">Resolved 1 hour ago</small>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h4>About Portal</h4>
+                <p>This is an official initiative of the Andhra Pradesh Government to streamline civic complaint
+                    redressal and enhance citizen participation.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul style="list-style: none;">
+                    <li><a href="#" style="color: #ccc;">Government Portal</a></li>
+                    <li><a href="#" style="color: #ccc;">Privacy Policy</a></li>
+                    <li><a href="#" style="color: #ccc;">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact Support</h4>
+                <p>Helpline: 1902</p>
+                <p>Email: support-complaints@ap.gov.in</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Government of Andhra Pradesh. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Floating QR Widget for "Any Device" Access -->
+    <div class="floating-qr">
+        <div id="fab-qr-popup" class="qr-popup">
+            <h5 style="margin: 0 0 10px 0; font-size: 0.8rem;">Scan to Report Issues</h5>
+            <div id="fab-qrcode" style="display: flex; justify-content: center;"></div>
+            <small style="color: #666; font-size: 0.65rem; display: block; margin-top: 5px;">Opens Complaint
+                Form</small>
+        </div>
+        <div class="qr-button" onclick="document.getElementById('fab-qr-popup').classList.toggle('active')"
+            title="Open on Mobile">
+            <i class="fa-solid fa-qrcode"></i>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+        // Use a more robust URL builder
+        const getBaseUrl = () => {
+            const path = window.location.pathname;
+            return window.location.origin + path.substring(0, path.lastIndexOf('/') + 1);
+        };
+        const baseUrl = getBaseUrl();
+        const submitUrl = baseUrl + 'submit.html';
+        const homeUrl = baseUrl + 'index.html';
+
+        // 1. FAB QR (Floating)
+        new QRCode(document.getElementById("fab-qrcode"), {
+            text: submitUrl,
+            width: 150,
+            height: 150,
+            colorDark: "#003366",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+
+        // 2. Middle Page QR (Static)
+        new QRCode(document.getElementById("public-qr"), {
+            text: submitUrl,
+            width: 160,
+            height: 160,
+            colorDark: "#003366",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+
+        // 3. Header QR (Redirect)
+        new QRCode(document.getElementById("header-qr"), {
+            text: homeUrl,
+            width: 40,
+            height: 40,
+            colorDark: "#003366",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.L
+        });
+    </script>
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>

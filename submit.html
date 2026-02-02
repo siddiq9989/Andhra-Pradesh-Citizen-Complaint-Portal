@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Complaint | AP Citizen Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo-section">
+                <div class="logo-text">
+                    <h1>Andhra Pradesh State Portal</h1>
+                    <p>Citizen Complaint Management System</p>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="submit.html">Submit Complaint</a></li>
+                <li><a href="track.html">Track Complaint</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="admin-login.html" class="btn-cta">Admin Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="section-padding">
+        <div class="form-container">
+            <h2 style="text-align: center; margin-bottom: 20px; color: var(--primary-color);">File a New Complaint</h2>
+            <p style="text-align: center; margin-bottom: 30px; color: #666;">Provide accurate details to help us resolve
+                the issue efficiently.</p>
+
+            <form id="complaintForm">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="form-group">
+                        <label for="citizenName">Full Name *</label>
+                        <input type="text" id="citizenName" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="citizenPhone">Phone / Email *</label>
+                        <input type="text" id="citizenPhone" required placeholder="Email or 10-digit mobile">
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="form-group">
+                        <label for="district">District *</label>
+                        <select id="district" required>
+                            <option value="">Select District</option>
+                            <!-- JS will populate -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="town">Town / Mandal *</label>
+                        <select id="town" required disabled>
+                            <option value="">Select Town/Mandal</option>
+                            <!-- JS will populate based on district -->
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="village">Village / Ward / Street *</label>
+                    <input type="text" id="village" required placeholder="Enter Village name or Ward number">
+                    <small style="color: #666;">Provide the specific village or local area name.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Complaint Category *</label>
+                    <select id="category" required>
+                        <option value="">Select Category</option>
+                        <option value="Pothole">Pothole</option>
+                        <option value="Garbage">Garbage Disposal</option>
+                        <option value="Water">Water Supply</option>
+                        <option value="Electricity">Electricity Issue</option>
+                        <option value="StreetLights">Street Lights</option>
+                        <option value="Other">Other Issues</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Detailed Description *</label>
+                    <textarea id="description" rows="5" required
+                        placeholder="Describe the issue with landmarks..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="complaintImage">Upload Image (Optional)</label>
+                    <input type="file" id="complaintImage" accept="image/*">
+                    <small style="color: #666;">Max size: 5MB</small>
+                </div>
+
+                <div style="margin-top: 30px;">
+                    <button type="submit" id="submitBtn">Submit Complaint</button>
+                </div>
+            </form>
+
+            <div id="successMessage" style="display: none; text-align: center; padding: 20px; color: var(--success);">
+                <i class="fa-solid fa-circle-check" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                <h3>Complaint Submitted Successfully!</h3>
+                <p>Your Complaint ID: <strong id="compID">...</strong></p>
+                <p>Please keep this ID for tracking.</p>
+                <button onclick="window.location.href='index.html'"
+                    style="margin-top: 20px; background: var(--primary-color); color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Back
+                    to Home</button>
+            </div>
+        </div>
+    </main>
+
+    <footer style="margin-top: 50px;">
+        <div class="footer-bottom">
+            &copy; 2024 Government of Andhra Pradesh. Official Citizen Portal.
+        </div>
+    </footer>
+
+    <script type="module" src="js/complaints.js"></script>
+</body>
+
+</html>
